@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteCond %{REQUEST_FILENAME}\.shtml -f
+RewriteRule ^(.*)$ $1.shtml
+AddType text/html .shtml .htm .html
+AddOutputFilter INCLUDES .shtml .htm .html
+ErrorDocument 404 /404.shtml

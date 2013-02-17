@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^(.*)\.wav$ capcha.php?wav=$1.wav [L]
